@@ -64,3 +64,66 @@
     }
     footer {
       text-align: center;
+      padding: 1rem;
+      background-color: #ffe4b5;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NotesLand</h1>
+    <p>La tua canzone speciale, creata su misura per il tuo bambino</p>
+    <a class="cta-button" href="#modulo">Richiedi la tua canzone</a>
+  </header>
+
+  <section>
+    <h2>Ascolta gli album</h2>
+    <p>
+      Scopri le nostre canzoni su <a href="https://hyperfollow.com/NotesLandMusic" target="_blank">Spotify, Apple Music e altro ancora</a>
+      oppure visita il nostro <a href="https://www.youtube.com/@NotesLandMusic" target="_blank">canale YouTube</a>.
+    </p>
+  </section>
+
+  <section class="examples">
+    <h2>Esempi di canzoni personalizzate</h2>
+    <p>Ascolta come trasformiamo emozioni in musica su misura!</p>
+
+    <h3>🎵 Elisa Principessa Dance</h3>
+    <audio controls>
+      <source src="demo1.mp3" type="audio/mpeg">
+      Il tuo browser non supporta l’audio HTML.
+    </audio>
+  </section>
+
+  <section>
+    <h2>Come funziona?</h2>
+    <ol>
+      <li>Compila il modulo qui sotto</li>
+      <li>Ricevi il preventivo via email</li>
+      <li>In pochi giorni, riceverai la tua canzone unica!</li>
+    </ol>
+  </section>
+
+  <section id="modulo">
+    <h2>Richiedi la tua canzone</h2>
+    <form action="https://formspree.io/f/meoznbar" method="POST">
+      <input type="hidden" name="_redirect" value="https://notes-land.vercel.app/grazie.html">
+      <input type="text" name="nome_genitore" placeholder="Tuo nome" required />
+      <input type="text" name="nome_bambino" placeholder="Nome del bambino" required />
+      <input type="text" name="eta_bambino" placeholder="Età del bambino" required />
+      <input type="text" name="occasione" placeholder="Occasione (es. compleanno)" />
+      <input type="text" name="stile" placeholder="Stile musicale preferito" />
+      <textarea name="messaggio" placeholder="Messaggio personale" rows="4"></textarea>
+      <input type="email" name="email" placeholder="La tua email" required />
+      <input type="text" name="_gotcha" style="display:none">
+      <button type="submit">Invia richiesta</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 NotesLand Music – Tutti i diritti riservati | 
+    <a href="https://hyperfollow.com/NotesLandMusic" target="_blank">Ascolta ora</a>
+  </footer>
+</body>
+</html>
