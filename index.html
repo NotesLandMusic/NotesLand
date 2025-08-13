@@ -38,18 +38,12 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      margin-top: 1rem;
     }
-     <section class="examples">
-  <h2>Esempi di canzoni personalizzate</h2>
-  <p>Ascolta come trasformiamo emozioni in musica su misura!</p>
-
-  <h3>🎵 Elisa Principessa Dance</h3>
-  <audio controls>
-    <source src="demo1.mp3" type="audio/mpeg">
-    Il tuo browser non supporta l’audio HTML.
-  </audio>
-</section>
-
+    .examples audio {
+      display: block;
+      margin-bottom: 1rem;
+      width: 100%;
     }
     form input, form textarea {
       width: 100%;
@@ -85,14 +79,21 @@
 
   <section>
     <h2>Ascolta gli album</h2>
-    <p>Scopri le nostre canzoni su <a href="https://hyperfollow.com/NotesLandMusic" target="_blank">Spotify, Apple Music e altro ancora</a> oppure visita il nostro <a href="https://www.youtube.com/@NotesLandMusic" target="_blank">canale YouTube</a>.</p>
+    <p>
+      Scopri le nostre canzoni su <a href="https://hyperfollow.com/NotesLandMusic" target="_blank">Spotify, Apple Music e altro ancora</a>
+      oppure visita il nostro <a href="https://www.youtube.com/@NotesLandMusic" target="_blank">canale YouTube</a>.
+    </p>
   </section>
 
   <section class="examples">
     <h2>Esempi di canzoni personalizzate</h2>
     <p>Ascolta come trasformiamo emozioni in musica su misura!</p>
-    <audio controls src="demo1.mp3">Demo 1</audio>
-    <audio controls src="demo2.mp3">Demo 2</audio>
+
+    <h3>🎵 Elisa Principessa Dance</h3>
+    <audio controls>
+      <source src="demo1.mp3" type="audio/mpeg">
+      Il tuo browser non supporta l’audio HTML.
+    </audio>
   </section>
 
   <section>
@@ -119,7 +120,8 @@
   </section>
 
   <footer>
-    &copy; 2025 NotesLand Music – Tutti i diritti riservati | <a href="https://hyperfollow.com/NotesLandMusic" target="_blank">Ascolta ora</a>
+    &copy; 2025 NotesLand Music – Tutti i diritti riservati | 
+    <a href="https://hyperfollow.com/NotesLandMusic" target="_blank">Ascolta ora</a>
   </footer>
 </body>
 </html>
