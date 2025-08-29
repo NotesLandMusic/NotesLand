@@ -209,4 +209,32 @@ h1{
   textarea{ grid-column: 1 / -1; }
   .full{ grid-column: 1 / -1; }
 }
-<qui inserire il CSS che ho scritto prima>
+
+.pricing {
+  text-align: center;
+  background: linear-gradient(180deg, #133b6e, #102f57);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: clamp(1.2rem, 3vw, 2rem);
+  box-shadow: var(--shadow);
+}
+.pricing h2 {
+  font-family: "Baloo 2", cursive;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+  color: var(--star);
+}
+.pricing .price {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: bold;
+  margin: 0.75rem 0 1rem;
+}
+.pricing .old-price {
+  text-decoration: line-through;
+  opacity: 0.7;
+  margin-right: .5rem;
+}
+.pricing .new-price {
+  color: var(--accent);
+  font-size: 1.4em;
+}
