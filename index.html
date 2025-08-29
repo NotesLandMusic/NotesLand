@@ -13,9 +13,10 @@
 &lt;!-- End TrustBox script --&gt;
 <style>
 /* Reviews section */
-section.reviews { margin: 3rem 0; text-align: center; }
+section.reviews { margin: 3rem auto; text-align: center; max-width: 900px; }
 section.reviews h2 { margin-bottom: .5rem; }
 section.reviews p { margin-bottom: 1rem; }
+section.reviews .trustpilot-widget { display: inline-block; }
 </style></head>
 <body>
 <header class="hero">
@@ -26,8 +27,7 @@ section.reviews p { margin-bottom: 1rem; }
 <a class="cta" href="#modulo">🎵 Richiedi la tua canzone</a>
 </div>
 </header>
-<section class="reviews" id="recensioni"><h2>Recensioni dei clienti</h2><p>Leggi cosa dicono i genitori su NotesLand su Trustpilot:</p><div class="trustpilot-widget" data-businessunit-id="68b1bc247630f16cf2bb1cc5" data-locale="it-IT" data-style-height="52px" data-style-width="100%" data-template-id="56278e9abfbbba0bdcd568bc" data-token="8160357a-b264-46b6-8dfa-aaaaa8883ea9"><a href="https://it.trustpilot.com/review/notes-land.vercel.app" rel="noopener" target="_blank">Trustpilot</a></div>
-</section><section id="modulo">
+<section id="modulo">
 <h2>Richiedi la tua canzone</h2>
 <form action="https://api.web3forms.com/submit" method="POST">
 <input name="access_key" type="hidden" value="01cb7a20-2752-4c19-8f01-0a9a118af972"/>
@@ -35,11 +35,11 @@ section.reviews p { margin-bottom: 1rem; }
 <input name="redirect" type="hidden" value="https://notes-land.vercel.app/grazie.html"/>
 <input name="nome_genitore" placeholder="Tuo nome" required="" type="text"/>
 <input name="nome_bambino" placeholder="Nome del bambino" required="" type="text"/>
-<input name="eta_bambino" placeholder="Età del bambino" required="" type="text">
-<input name="occasione" placeholder="Occasione (es. compleanno)" type="text">
-<input name="stile" placeholder="Stile musicale preferito" type="text"/>
+<input name="eta_bambino" placeholder="Età del bambino" required="" type="text"/>
+<input name="occasione" placeholder="Occasione (es. compleanno)" type="text"/>
+<input name="stile" placeholder="Stile musicale preferito" type="text">
 <textarea class="full" name="messaggio" placeholder="Messaggio personale" rows="4"></textarea>
-<input class="full" name="email" placeholder="La tua email" required="" type="email"/>
+<input class="full" name="email" placeholder="La tua email" required="" type="email">
 <input name="botcheck" style="display:none" type="text"/>
 <button class="full" type="submit">Invia richiesta</button>
 </input></input></form>
@@ -120,11 +120,11 @@ section.reviews p { margin-bottom: 1rem; }
         </audio>
 </div>
 </section>
-
 </main>
 <footer>
     © 2025 NotesLand Music – Tutti i diritti riservati ·
     <a href="https://hyperfollow.com/NotesLandMusic" rel="noopener" target="_blank">Ascolta ora</a>
 </footer>
-</body>
+<section class="reviews" id="recensioni"><h2>Recensioni dei clienti</h2><p>Leggi cosa dicono i genitori su NotesLand su Trustpilot:</p><div class="trustpilot-widget" data-businessunit-id="68b1bc247630f16cf2bb1cc5" data-locale="it-IT" data-style-height="52px" data-style-width="100%" data-template-id="56278e9abfbbba0bdcd568bc" data-token="8160357a-b264-46b6-8dfa-aaaaa8883ea9"><a href="https://it.trustpilot.com/review/notes-land.vercel.app" rel="noopener" target="_blank">Trustpilot</a></div>
+</section></body>
 </html>
