@@ -31,10 +31,20 @@
     <section class="examples">
       <h2>Esempi di canzoni personalizzate</h2>
       <p>Ascolta come trasformiamo emozioni in musica su misura!</p>
+
       <div class="track">
         <h3>🎵 Elisa Principessa Dance</h3>
         <audio controls>
           <source src="demo1.mp3" type="audio/mpeg">
+          Il tuo browser non supporta l’audio HTML.
+        </audio>
+      </div>
+
+      <div class="track">
+        <h3>🎵 Gabriele Supereroe Rock</h3>
+        <audio controls>
+          <source src="demo2.mp3" type="audio/mpeg">
+          Il tuo browser non supporta l’audio HTML.
         </audio>
       </div>
     </section>
@@ -52,7 +62,9 @@
       <h2>Richiedi la tua canzone</h2>
       <form action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="01cb7a20-2752-4c19-8f01-0a9a118af972">
+        <!-- Redirect a vercel -->
         <input type="hidden" name="redirect" value="https://notes-land.vercel.app/grazie.html">
+
         <input type="text" name="nome_genitore" placeholder="Tuo nome" required />
         <input type="text" name="nome_bambino" placeholder="Nome del bambino" required />
         <input type="text" name="eta_bambino" placeholder="Età del bambino" required />
@@ -61,6 +73,7 @@
         <textarea class="full" name="messaggio" placeholder="Messaggio personale" rows="4"></textarea>
         <input class="full" type="email" name="email" placeholder="La tua email" required />
         <input type="text" name="botcheck" style="display:none">
+
         <button class="full" type="submit">Invia richiesta</button>
       </form>
     </section>
