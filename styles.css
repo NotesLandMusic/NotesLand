@@ -209,7 +209,6 @@ h1{
   textarea{ grid-column: 1 / -1; }
   .full{ grid-column: 1 / -1; }
 }
-
 .pricing {
   text-align: center;
   background: linear-gradient(180deg, #133b6e, #102f57);
@@ -238,3 +237,59 @@ h1{
   color: var(--accent);
   font-size: 1.4em;
 }
+
+/* === WhatsApp & floating button (moved from index.html) === */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366;
+    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .whatsapp-btn:hover {
+    background-color: #1DA851;
+  }
+  .whatsapp-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+  }
+  .whatsapp-contact {
+    text-align: center;
+    margin: 2em auto;
+    max-width: 800px;
+    padding: 0 1em;
+  }
+  footer .whatsapp-footer {
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    z-index: 999;
+  }
+  .whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  /* Nascondi floating button su desktop, visibile solo su mobile */
+  @media (min-width: 768px) {
+    .whatsapp-float {
+      display: none;
+    }
+  }
+
+/* Utility */
+.hidden{display:none}
+
