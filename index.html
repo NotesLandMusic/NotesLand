@@ -31,7 +31,7 @@
   .whatsapp-contact {
     text-align: center;
     margin: 2em auto;
-    max-width: 800px; /* stessa larghezza delle altre sezioni */
+    max-width: 800px;
     padding: 0 1em;
   }
   footer .whatsapp-footer {
@@ -52,11 +52,18 @@
     justify-content: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     z-index: 999;
+    animation: pulse 2s infinite;
   }
   .whatsapp-float svg {
     width: 28px;
     height: 28px;
     fill: white;
+  }
+  /* Animazione pulse */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
   }
   /* Nascondi floating button su desktop, visibile solo su mobile */
   @media (min-width: 768px) {
@@ -227,4 +234,5 @@
 
 <!-- FLOATING WHATSAPP BUTTON (solo mobile) -->
 <a class="whatsapp-float" href="https://wa.me/393534840721" target="_blank" rel="noopener">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 .396c-8.837 0-16 7.163-16 16 0 2.837.74 5.594 2.146 8.021l-2.229 8.146 8.333-2.188c2.354 1.292 5.021 1.979
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 .396c-8.837 0-16 7
+
