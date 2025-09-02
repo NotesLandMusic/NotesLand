@@ -43,26 +43,14 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25D366;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    width: 64px;
+    height: 64px;
     z-index: 999;
-    animation: pulse 2s infinite;
   }
   .whatsapp-float img {
-    width: 60%;
-    height: 60%;
-  }
-  /* Animazione pulse */
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   /* Nascondi floating button su desktop, visibile solo su mobile */
   @media (min-width: 768px) {
@@ -231,12 +219,10 @@
     </span>
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON (solo mobile con immagine) -->
+<!-- FLOATING WHATSAPP BUTTON (solo mobile con GIF) -->
 <a class="whatsapp-float" href="https://wa.me/393534840721" target="_blank" rel="noopener">
-  <img src="icona_whatsapp.avif" alt="WhatsApp" />
+  <img src="bottone_whatsapp.gif" alt="WhatsApp" />
 </a>
 
 </body>
 </html>
-
-
