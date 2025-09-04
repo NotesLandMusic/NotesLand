@@ -271,13 +271,25 @@ h1{
     margin-top: 1em;
   }
   .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 64px;
-    height: 64px;
-    z-index: 999;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  padding: 6px 12px;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  color: #fff;
+  font-weight: 700;
+  font-size: .9rem;
+  text-decoration: none;
+  z-index: 999;
+  max-width: 85vw;
+  overflow: hidden;
+  white-space: nowrap;
+}
   .whatsapp-float img {
     width: 100%;
     height: 100%;
@@ -286,8 +298,25 @@ h1{
   /* Nascondi floating button su desktop, visibile solo su mobile */
   @media (min-width: 768px) {
     .whatsapp-float {
-      display: none;
-    }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  padding: 6px 12px;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  color: #fff;
+  font-weight: 700;
+  font-size: .9rem;
+  text-decoration: none;
+  z-index: 999;
+  max-width: 85vw;
+  overflow: hidden;
+  white-space: nowrap;
+}
   }
 
 /* Utility */
