@@ -239,85 +239,104 @@ h1{
 }
 
 /* === WhatsApp & floating button (moved from index.html) === */
-.whatsapp-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #25D366;
-    color: white;
-    font-weight: 600;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  .whatsapp-btn:hover {
-    background-color: #1DA851;
-  }
-  .whatsapp-btn svg {
-    width: 20px;
-    height: 20px;
-    fill: white;
-  }
-  .whatsapp-contact {
-    text-align: center;
-    margin: 2em auto;
-    max-width: 800px;
-    padding: 0 1em;
-  }
-  footer .whatsapp-footer {
-    display: block;
-    text-align: center;
-    margin-top: 1em;
-  }
-  .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #25D366;
-  padding: 6px 12px;
-  border-radius: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
-  color: #fff;
-  font-weight: 700;
-  font-size: .9rem;
-  text-decoration: none;
-  z-index: 999;
-  max-width: 85vw;
-  overflow: hidden;
-  white-space: nowrap;
 }
-  .whatsapp-float img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  }
+  }
   }
   /* Nascondi floating button su desktop, visibile solo su mobile */
   @media (min-width: 768px) {
-    .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #25D366;
-  padding: 6px 12px;
-  border-radius: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
-  color: #fff;
-  font-weight: 700;
-  font-size: .9rem;
-  text-decoration: none;
-  z-index: 999;
-  max-width: 85vw;
-  overflow: hidden;
-  white-space: nowrap;
-}
-  }
+    }
 
 /* Utility */
 .hidden{display:none}
+
+/* === WhatsApp & Floating Button (fix overflow + desktop) === */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color .2s ease;
+}
+.whatsapp-btn:hover { background-color: #1DA851; }
+.whatsapp-btn svg { width: 20px; height: 20px; fill: #fff; }
+
+.whatsapp-contact {
+  text-align: center;
+  margin: 2em auto;
+  max-width: 800px;
+  padding: 0 1em;
+}
+footer .whatsapp-footer {
+  display: block;
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* Floating pill — mobile first */
+.whatsapp-float{
+  position: fixed;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  right:  max(16px, env(safe-area-inset-right));
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25D366;
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  z-index: 2147483647;
+  line-height: 1;
+  max-width: min(92vw, 320px);
+  overflow: hidden;
+  will-change: max-width;
+}
+.whatsapp-float img{
+  width: 28px; height: 28px; display:block; flex: 0 0 28px;
+}
+.whatsapp-float .whatsapp-help{
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 220px;
+}
+
+/* Desktop: compact icon expands on hover/focus */
+@media (min-width: 768px){
+  .whatsapp-float{
+    padding: 12px;
+    border-radius: 999px;
+    max-width: 48px;
+    transition: max-width .25s ease, padding .2s ease;
+  }
+  .whatsapp-float .whatsapp-help{
+    max-width: 0;
+    opacity: 0;
+    transition: max-width .25s ease, opacity .2s ease;
+  }
+  .whatsapp-float:hover,
+  .whatsapp-float:focus-visible{
+    padding: 12px 16px;
+    max-width: 320px;
+  }
+  .whatsapp-float:hover .whatsapp-help,
+  .whatsapp-float:focus-visible .whatsapp-help{
+    max-width: 220px;
+    opacity: 1;
+  }
+}
+
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .whatsapp-float{ transition: none; }
+  .whatsapp-float .whatsapp-help{ transition: none; }
+}
