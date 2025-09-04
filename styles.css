@@ -340,3 +340,10 @@ footer .whatsapp-footer {
   .whatsapp-float{ transition: none; }
   .whatsapp-float .whatsapp-help{ transition: none; }
 }
+
+/* Migliora la leggibilità del placeholder nelle textarea */
+textarea::placeholder {
+  white-space: pre-wrap;  /* Mantiene gli a capo */
+  line-height: 1.4;       /* Spaziatura più leggibile */
+  color: #666;            /* Grigio chiaro, distinguibile dal testo */
+}
