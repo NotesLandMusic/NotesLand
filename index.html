@@ -7,6 +7,74 @@
 <title>NotesLand – Canzoni su Misura</title>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&amp;family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="styles.css" rel="stylesheet"/>
+<style>
+  .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366;
+    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .whatsapp-btn:hover {
+    background-color: #1DA851;
+  }
+  .whatsapp-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+  }
+  .whatsapp-contact {
+    text-align: center;
+    margin: 2em auto;
+    max-width: 800px;
+    padding: 0 1em;
+  }
+  footer .whatsapp-footer {
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+  }
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    z-index: 999;
+  }
+  .whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  /* Nascondi floating button su desktop, visibile solo su mobile */
+  @media (min-width: 768px) {
+    .whatsapp-float {
+      display: none;
+    }
+  }
+</style>
+
+<!-- Critical CSS solo per il bottone flottante su mobile -->
+<style>
+  .whatsapp-float{
+    position:fixed; bottom:20px; right:20px;
+    display:flex; align-items:center; gap:8px;
+    background:#25D366; padding:6px 10px; border-radius:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    color:#fff; font-weight:700; font-size:.95rem; text-decoration:none;
+    z-index:2147483647;
+  }
+  .whatsapp-float img{ width:28px; height:28px; display:block; }
+  .whatsapp-float .whatsapp-help{ white-space:nowrap; }
+  @media (min-width:768px){ .whatsapp-float{ display:none; } }
+</style>
+
 </head>
 <body>
 <header class="hero">
@@ -96,6 +164,24 @@
 
 </section>
 
+<!-- SEZIONE CONTATTO WHATSAPP -->
+<section class="whatsapp-contact">
+  <h2>Hai domande o richieste? 📲</h2>
+  <p>
+    Scrivici direttamente su <strong>WhatsApp</strong> per ricevere più informazioni 
+    o inviarci le tue richieste. Saremo felici di aiutarti!
+  </p>
+  <p>
+    <a class="whatsapp-btn" 
+       href="https://wa.me/393534840721" 
+       target="_blank" 
+       rel="noopener">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 .396c-8.837 0-16 7.163-16 16 0 2.837.74 5.594 2.146 8.021l-2.229 8.146 8.333-2.188c2.354 1.292 5.021 1.979 7.75 1.979h.001c8.837 0 16-7.163 16-16 0-4.271-1.664-8.288-4.688-11.313S20.271.396 16 .396zm0 29.208c-2.458 0-4.854-.646-6.938-1.865l-.5-.292-4.938 1.292 1.323-4.854-.323-.5C3.188 21.229 2.667 18.646 2.667 16c0-7.354 5.979-13.333 13.333-13.333 3.563 0 6.917 1.396 9.438 3.917 2.521 2.521 3.896 5.875 3.896 9.438 0 7.354-5.979 13.333-13.333 13.333zm7.333-9.917c-.396-.208-2.333-1.146-2.688-1.271-.354-.125-.604-.188-.854.208-.25.396-.979 1.271-1.208 1.521-.229.25-.448.271-.844.062-.396-.208-1.667-.615-3.177-1.958-1.177-1.052-1.979-2.354-2.208-2.75-.229-.396-.021-.604.187-.812.192-.192.427-.5.64-.75.213-.25.284-.417.427-.688.146-.271.073-.521-.042-.729-.125-.208-.854-2.062-1.167-2.833-.307-.74-.615-.635-.854-.646-.229-.01-.49-.012-.75-.012s-.688.104-1.052.521c-.364.417-1.385 1.354-1.385 3.302s1.417 3.833 1.615 4.104c.198.271 2.792 4.271 6.771 5.979.948.417 1.688.667 2.271.854.948.302 1.813.26 2.5.156.76-.114 2.333-.958 2.667-1.885.333-.927.333-1.719.229-1.885-.104-.167-.375-.271-.771-.479z"/></svg>
+       Notes Land Music
+    </a>
+  </p>
+</section>
+
 <!-- SEZIONE RECENSIONI -->
 <section class="reviews">
   <h2>Le recensioni dei nostri clienti 💬</h2>
@@ -138,6 +224,29 @@
 <footer>
     © 2025 NotesLand Music – Tutti i diritti riservati ·
     <a href="https://hyperfollow.com/NotesLandMusic" rel="noopener" target="_blank">Ascolta ora</a>
+    <span class="whatsapp-footer">
+      <a class="whatsapp-btn" 
+         href="https://wa.me/393534840721" 
+         target="_blank" 
+         rel="noopener">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 .396c-8.837 0-16 7.163-16 16 0 2.837.74 5.594 2.146 8.021l-2.229 8.146 8.333-2.188c2.354 1.292 5.021 1.979 7.75 1.979h.001c8.837 0 16-7.163 16-16 0-4.271-1.664-8.288-4.688-11.313S20.271.396 16 .396zm0 29.208c-2.458 0-4.854-.646-6.938-1.865l-.5-.292-4.938 1.292 1.323-4.854-.323-.5C3.188 21.229 2.667 18.646 2.667 16c0-7.354 5.979-13.333 13.333-13.333 3.563 0 6.917 1.396 9.438 3.917 2.521 2.521 3.896 5.875 3.896 9.438 0 7.354-5.979 13.333-13.333 13.333zm7.333-9.917c-.396-.208-2.333-1.146-2.688-1.271-.354-.125-.604-.188-.854.208-.25.396-.979 1.271-1.208 1.521-.229.25-.448.271-.844.062-.396-.208-1.667-.615-3.177-1.958-1.177-1.052-1.979-2.354-2.208-2.75-.229-.396-.021-.604.187-.812.192-.192.427-.5.64-.75.213-.25.284-.417.427-.688.146-.271.073-.521-.042-.729-.125-.208-.854-2.062-1.167-2.833-.307-.74-.615-.635-.854-.646-.229-.01-.49-.012-.75-.012s-.688.104-1.052.521c-.364.417-1.385 1.354-1.385 3.302s1.417 3.833 1.615 4.104c.198.271 2.792 4.271 6.771 5.979.948.417 1.688.667 2.271.854.948.302 1.813.26 2.5.156.76-.114 2.333-.958 2.667-1.885.333-.927.333-1.719.229-1.885-.104-.167-.375-.271-.771-.479z"/></svg>
+         Notes Land Music
+      </a>
+    </span>
 </footer>
+
+
+
+
+<!-- FLOATING WHATSAPP BUTTON (solo mobile con GIF + testo) -->
+<a class="whatsapp-float"
+   href="https://wa.me/393534840721"
+   rel="noopener"
+   target="_blank"
+   aria-label="Chatta su WhatsApp">
+  <img src="bottone_whatsapp.gif" alt="WhatsApp" loading="lazy" />
+  <span class="whatsapp-help">Serve aiuto?</span>
+</a>
+
 </body>
 </html>
